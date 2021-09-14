@@ -1,0 +1,29 @@
+.btn {
+    padding: 1.6rem 4rem;
+    text-decoration: none;
+    border-style: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: var(--bold);
+    transition: all 0.2s;
+
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    &--primary {
+        background-image: linear-gradient(to right, var(--lime-green), var(--primary));
+        color: var(--white);
+    }
+
+    &--friendly {
+        border-radius: 10rem;
+    }
+}

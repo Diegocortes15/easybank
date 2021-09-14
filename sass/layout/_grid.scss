@@ -1,0 +1,5 @@
+.col-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3.8rem;
+}

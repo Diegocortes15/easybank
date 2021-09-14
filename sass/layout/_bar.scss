@@ -1,0 +1,49 @@
+.bar {
+    background-color: var(--white);
+    position: relative;
+    z-index: 1500;
+    width: 100%;
+    @include respond(tab-port) {
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        @include respond(tab-port) {
+            width: calc(100% - 6rem);
+            padding: 2rem 3rem;
+        }
+    }
+
+    &-navigation {
+        @include respond(tab-port) {
+            display: none;
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+            list-style: none;
+        }
+        &__link {
+            color: var(--grayish-glue);
+            text-decoration: none;
+        }
+        &__button {
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+        &__toggle-button {
+            display: none;
+            border: none;
+            // background-color: rgba(0, 0, 0, 0);
+            padding: 0.5rem;
+
+            @include respond(tab-port) {
+                display: inline-block;
+            }
+        }
+    }
+}
