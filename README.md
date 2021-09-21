@@ -3,4 +3,4 @@ FrontEnd Mentor Challenge
 
 Click the link below
 
-[easybank](easybank-diego.netlify.app)
+[easybank](https://easybank-diego.netlify.app/)
