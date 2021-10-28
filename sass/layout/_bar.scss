@@ -1,18 +1,23 @@
 .bar {
     background-color: var(--white);
     position: relative;
+    top: 0;
+    left: 0;
     z-index: 1500;
     width: 100%;
     @include respond(tab-port) {
+        position: fixed;
+        box-shadow: 0rem -2.95rem 7rem 0.01rem rgba(0, 0, 0, 0.75);
     }
+
     &__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 2rem 0;
         @include respond(tab-port) {
-            width: calc(100% - 6rem);
-            padding: 2rem 3rem;
+            width: calc(100% - 4rem);
+            padding: 1rem 2rem;
         }
     }
 
@@ -26,9 +31,14 @@
             gap: 3rem;
             list-style: none;
         }
+
         &__link {
             color: var(--grayish-glue);
             text-decoration: none;
+            transition: color 0.2s ease;
+            &:hover {
+                color: var(--dark-blue);
+            }
         }
         &__button {
             @include respond(tab-port) {
@@ -39,7 +49,13 @@
             display: none;
             border: none;
             // background-color: rgba(0, 0, 0, 0);
-            padding: 0.5rem;
+            padding: 2rem;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                box-shadow: 0.2rem 0.2rem 0.6rem #d9d9d9;
+            }
 
             @include respond(tab-port) {
                 display: inline-block;

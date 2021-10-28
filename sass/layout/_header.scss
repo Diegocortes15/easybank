@@ -3,10 +3,14 @@
     background-color: var(--very-light-gray);
     position: relative;
     overflow-x: clip;
+    @include respond(tab-port) {
+        margin-top: 6.5rem;
+    }
     @include respond(phone) {
         position: static;
         height: 100%;
-        margin-top: -12.25rem;
+        // margin-top: -12.25rem;
+        margin-top: -5.75rem;
     }
 
     &__content {
@@ -84,6 +88,7 @@
             transform: translate(-83%, -50%);
             object-fit: contain;
             z-index: 1000;
+            pointer-events: none;
             @include respond(tab-land) {
                 width: 75%;
             }
