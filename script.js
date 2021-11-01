@@ -13,7 +13,6 @@ navigationCheckbox.checked = true;
 navigationMobile.classList.add('hidden');
 
 const openMobileNav = function () {
-    console.log('toggle menu');
     overlay.classList.remove('hidden');
     navigationMobile.classList.remove('hidden');
     burgerMenu.innerHTML = '';
@@ -31,7 +30,6 @@ const openMobileNav = function () {
 };
 
 const closeMobileNav = function () {
-    console.log('hidden toggle menu');
     overlay.classList.add('hidden');
     navigationMobile.classList.add('hidden');
     burgerMenu.innerHTML = '';
@@ -48,9 +46,6 @@ const closeMobileNav = function () {
 };
 
 burgerMenu.addEventListener('click', function () {
-    // navigationCheckbox.checked = navigationCheckbox.checked === false ? false : true;
-    console.log(navigationCheckbox.checked);
-
     if (navigationCheckbox.checked) {
         openMobileNav();
     }
