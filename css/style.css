@@ -120,6 +120,13 @@ h1 {
 .display-hidden {
   display: none; }
 
+.section {
+  transition: transform 1s, opacity 1s; }
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem); }
+
 :root {
   --primary: #00c3b1;
   --dark-blue: hsl(233, 26%, 24%);
