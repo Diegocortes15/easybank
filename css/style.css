@@ -12,6 +12,30 @@ $breakpoint argument choices:
 ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
+@keyframes mockupsAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-83%, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(-83%, -50%); } }
+
+@keyframes mockupsAnimation--phone {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0); } }
+
+@keyframes header__textboxAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -86,7 +110,8 @@ h1 {
   width: 100%;
   height: 100%;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(4, 10, 59, 0.7) 50%);
-  z-index: 5000; }
+  z-index: 5000;
+  transition: all 0.3s; }
 
 .hidden {
   visibility: hidden;
@@ -185,8 +210,9 @@ h1 {
   position: relative;
   top: 0;
   left: 0;
-  z-index: 1500;
-  width: 100%; }
+  z-index: 6000;
+  width: 100%;
+  transition: all 1s; }
   @media only screen and (max-width: 56.25em) {
     .bar {
       position: fixed;
@@ -199,6 +225,7 @@ h1 {
     @media only screen and (max-width: 56.25em) {
       .bar__content {
         width: calc(100% - 4rem);
+        height: 6.5rem;
         padding: 1rem 2rem; } }
   @media only screen and (max-width: 56.25em) {
     .bar-navigation {
@@ -228,6 +255,42 @@ h1 {
     @media only screen and (max-width: 56.25em) {
       .bar-navigation__toggle-button {
         display: inline-block; } }
+
+.navigation--mobile {
+  width: calc(100% - 6rem);
+  height: calc(50% - 6rem);
+  position: fixed;
+  z-index: 5500;
+  top: 12rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--light-grayish-blue);
+  border-radius: 0.9rem;
+  transition: all 0.5s; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation--mobile {
+      display: inline-block; } }
+  .navigation--mobile__list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none; }
+  .navigation--mobile__item {
+    text-align: center;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .navigation--mobile__link {
+    width: 100%;
+    color: var(--grayish-glue);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 1.5rem 0; }
+    .navigation--mobile__link:hover {
+      color: var(--dark-blue); }
 
 .footer {
   background-color: var(--dark-blue); }
@@ -350,7 +413,10 @@ h1 {
     justify-content: center;
     align-items: start;
     gap: 3rem;
-    background-color: var(--very-light-gray); }
+    background-color: var(--very-light-gray);
+    -webkit-animation: header__textboxAnimation 1s ease 0.5s forwards;
+    animation: header__textboxAnimation 1s ease 0.5s forwards;
+    opacity: 0; }
     @media only screen and (max-width: 37.5em) {
       .header__text-box {
         display: flex;
@@ -392,10 +458,11 @@ h1 {
       position: absolute;
       top: 50%;
       left: 100%;
-      transform: translate(-83%, -50%);
       object-fit: contain;
       z-index: 1000;
-      pointer-events: none; }
+      pointer-events: none;
+      animation: mockupsAnimation 1s ease;
+      transform: translate(-83%, -50%); }
       @media only screen and (max-width: 75em) {
         .header-img__image-mockups {
           width: 75%; } }
@@ -405,6 +472,7 @@ h1 {
           top: 0;
           left: 50%;
           max-width: 100%;
+          animation: mockupsAnimation--phone 1s ease;
           transform: translate(-50%, 0); } }
 
 ::-webkit-scrollbar {

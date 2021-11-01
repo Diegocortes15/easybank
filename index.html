@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <script defer src="script.js"></script>
   <title>Frontend Mentor | Easybank landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -59,8 +60,9 @@
         <button class="bar-navigation__button btn btn--primary btn--friendly">
           Request Invite
         </button>
-        <input type="checkbox" class="bar-navigation__checkbox display-hidden" for="nav-mobile-toggle">
-        <label class="bar-navigation__toggle-button" id="nav-mobile-toggle">
+        <!-- <input type="checkbox" class="bar-navigation__checkbox display-hidden" id="nav-mobile-toggle"> -->
+        <input type="checkbox" class="bar-navigation__checkbox display-hidden" id="nav-mobile-toggle">
+        <label class="bar-navigation__toggle-button" for="nav-mobile-toggle">
           <svg class="bar-navigation-mobile__burguer" xmlns="http://www.w3.org/2000/svg" width="24" height="11">
             <g fill="#2D314D" fill-rule="evenodd">
               <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z" />
@@ -69,6 +71,26 @@
         </label>
       </div>
     </div>
+
+    <nav class="navigation--mobile hidden">
+      <ul class="navigation--mobile__list">
+        <li class="navigation--mobile__item">
+          <a class="navigation--mobile__link" href="#">Home</a>
+        </li>
+        <li class="navigation--mobile__item">
+          <a class="navigation--mobile__link" href="#">About</a>
+        </li>
+        <li class="navigation--mobile__item">
+          <a class="navigation--mobile__link" href="#">Contact</a>
+        </li>
+        <li class="navigation--mobile__item">
+          <a class="navigation--mobile__link" href="#">Blog</a>
+        </li>
+        <li class="navigation--mobile__item">
+          <a class="navigation--mobile__link" href="#">Portfolio</a>
+        </li>
+      </ul>
+    </nav>
 
     <header class="header">
       <div class="header__content container">

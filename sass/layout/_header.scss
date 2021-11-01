@@ -38,6 +38,10 @@
         align-items: start;
         gap: 3rem;
         background-color: var(--very-light-gray);
+        -webkit-animation: header__textboxAnimation 1s ease 0.5s forwards;
+        animation: header__textboxAnimation 1s ease 0.5s forwards;
+        opacity: 0;
+        // animation-delay: 0.5s;
         @include respond(phone) {
             display: flex;
             justify-content: center;
@@ -85,10 +89,12 @@
             position: absolute;
             top: 50%;
             left: 100%;
-            transform: translate(-83%, -50%);
             object-fit: contain;
             z-index: 1000;
             pointer-events: none;
+            animation: mockupsAnimation 1s ease;
+            transform: translate(-83%, -50%);
+
             @include respond(tab-land) {
                 width: 75%;
             }
@@ -97,6 +103,7 @@
                 top: 0;
                 left: 50%;
                 max-width: 100%;
+                animation: mockupsAnimation--phone 1s ease;
                 transform: translate(-50%, 0);
             }
         }
