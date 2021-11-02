@@ -24,6 +24,13 @@
         }
     }
 
+    &__logo {
+        max-width: 100%;
+        max-height: 100%;
+        width: 13.9rem;
+        height: 2rem;
+    }
+
     &__icon-list {
         display: flex;
         justify-content: center;
